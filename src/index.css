@@ -1,4 +1,18 @@
 @import "tailwindcss";
+
+@theme {
+  --color-text: #030303;
+  --color-background: #dbe1e1;
+  --color-primary: #50a545;
+  --color-secondary: #dda988;
+  --color-accent: #d0f1a7;
+  --color-text-dark: #fcfcfc;
+  --color-background-dark: #1e2424;
+  --color-primary-dark: #65ba5a;
+  --color-secondary-dark: #774322;
+  --color-accent-dark: #37580e;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -6,7 +20,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #dbe1e1;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
