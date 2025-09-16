@@ -1,7 +1,11 @@
 import React from 'react'
 
-const year = new Date().getFullYear()
+const year = new Date().getFullYear();
+const dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 const logo = dark ? '/logo-dark.png' : '/logo-light.png';
+
+console.log(logo)
+console.log(dark)
 
 const Footer = () => {
   return (
@@ -24,15 +28,15 @@ const Footer = () => {
         {/* <p>{year} ©<span className="font-bold text-text dark:text-text-dark">DobleL.arq</span>. All rights reserved</p>
         <p>. Creado por <span className='font-bold text-text dark:text-text-dark'>DobleP.dev</span></p> */}
 
-        <p class="flex items-center justify-center py-2 text-sm opacity-80">
-          <span class="font-semibold text-accent font-script pr-1">DobleL.arq</span>® hecho por
+        <p className="flex items-center justify-center py-2 text-sm opacity-80">
+          <span className="font-semibold text-accent font-script pr-1">DobleL.arq</span>® hecho por
           <a
             target="_blank"
             rel="noopener noreferrer"
             href="https://pittanapatricio.vercel.app"
-            class="inline-flex items-center pl-1 size-5"
+            className="inline-flex items-center pl-1 size-5"
           >
-            <img src={logo} alt="Pittana Patricio Dev" class="h-5" />
+            <img src='/logo-dark.png' alt="Pittana Patricio Dev" className="h-5" />
           </a>
           . © {year}
         </p>

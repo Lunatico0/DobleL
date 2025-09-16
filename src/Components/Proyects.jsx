@@ -65,4 +65,4 @@ const Proyects = () => {
   );
 };
 
-export default Proyectos;
+export default Proyects;
