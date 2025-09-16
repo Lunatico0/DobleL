@@ -2,7 +2,7 @@ import './App.css'
 import Footer from './Components/Footer.jsx'
 import Hero from './Components/Hero.jsx'
 import NavHero from './Components/NavHero.jsx'
-import Proyectos from './Components/Proyects.jsx'
+import Proyects from './Components/Proyects.jsx'
 
 function App() {
 
