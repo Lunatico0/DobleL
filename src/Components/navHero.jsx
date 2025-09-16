@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react"; // 👈 reemplazo de los iconos
+import { Menu, X } from "lucide-react";
 
 const NavHero = () => {
   const [open, setOpen] = useState(false);
