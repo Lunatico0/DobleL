@@ -1,0 +1,36 @@
+|   .gitignore
+|   eslint.config.js
+|   index.html
+|   package-lock.json
+|   package.json
+|   README.md
+|   tree.txt
+|   vite.config.js
+|
++---public
+|   |   DobleLlogo.png
+|   |   hero-image.webp
+|   |   logo-dark.svg
+|   |
+|   \---proyectos
+|           1.png
+|           2.png
+|           3.png
+|           4.png
+|           enhanced_3.png
+|           enhanced_4.png
+|           IG1.png
+|           IG2.png
+|           Presentaci�n.png
+|
+\---src
+    |   App.css
+    |   App.jsx
+    |   index.css
+    |   main.jsx
+    |
+    \---Components
+            Footer.jsx
+            Hero.jsx
+            NavHero.jsx
+            Proyects.jsx
