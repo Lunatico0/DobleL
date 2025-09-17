@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Award } from "lucide-react";
+import Swiper from "../Temp/swiper.jsx";
 
 const Counter = ({ end, duration }) => {
   const [count, setCount] = useState(0);
@@ -118,20 +119,25 @@ const Hero = () => {
         </motion.div>
       </motion.div>
 
-      {/* Columna derecha */}
-      <motion.div
+      {/* Columna derecha -> Carrusel informativo */}
+
+      <motion.div className='max-w-lg' >
+        <Swiper/>
+      </motion.div>
+
+      {/* <motion.div
         className="mt-10 md:mt-0 md:w-1/2 flex justify-center"
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 0.8 }}
       >
         <img
-          src="/hero-image.webp"
+          src="/LogoImgs/hero-image.webp"
           alt="Construcción moderna"
           className="rounded-xl shadow-lg max-h-[500px] object-cover"
         />
-      </motion.div>
-    </section>
+      </motion.div> */}
+    </section >
   );
 };
 

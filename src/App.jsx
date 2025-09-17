@@ -7,8 +7,8 @@ import Proyects from './Components/Proyects.jsx'
 function App() {
 
   return (
-    <div className="min-h-screen bg-background dark:bg-background-dark transition-colors duration-500 scroll-smooth">
-      <div className="max-w-7xl mx-auto px-4">
+    <div className="min-h-screen max-w-dvw bg-background dark:bg-background-dark transition-colors duration-500 scroll-smooth">
+      <div className="max-w-dvw md:max-w-7xl mx-auto px-4">
         <NavHero />
         <Hero />
         <Proyects />

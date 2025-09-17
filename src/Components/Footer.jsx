@@ -36,7 +36,7 @@ const Footer = () => {
             href="https://pittanapatricio.vercel.app"
             className="inline-flex items-center pl-1 size-5"
           >
-            <img src='/logo-dark.svg' alt="Pittana Patricio Dev" className="h-5" />
+            <img src='/LogoImgs/DobleP-Logo.svg' alt="Pittana Patricio Dev" className="h-5" />
           </a>
           . © {year}
         </p>
