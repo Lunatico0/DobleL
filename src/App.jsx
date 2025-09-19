@@ -1,20 +1,24 @@
 import './App.css'
-import Footer from './Components/Footer.jsx'
-import Hero from './Components/Hero.jsx'
-import NavHero from './Components/NavHero.jsx'
-import Proyects from './Components/Proyects.jsx'
+import Footer from '@components/layout/Footer.jsx'
+import NavHero from '@components/layout/NavHero.jsx'
+import Home from '@pages/Home.jsx'
+import Loader from "@ui/Loader";
+import { useState } from 'react';
 
 function App() {
+  const [loading, setLoading] = useState(true);
 
   return (
-    <div className="min-h-screen max-w-dvw bg-background dark:bg-background-dark transition-colors duration-500 scroll-smooth">
-      <div className="max-w-dvw md:max-w-7xl mx-auto px-4">
-        <NavHero />
-        <Hero />
-        <Proyects />
-        <Footer />
-      </div>
-    </div>
+    <>
+      {loading && <Loader onFinish={() => setLoading(false)} />}
+      {!loading && (
+        <div className="min-h-screen w-full max-w-7xl mx-auto bg-background dark:bg-backgroundDark transition-colors duration-500 scroll-smooth px-4 sm:px-6 lg:px-8">
+          <NavHero />
+          <Home />
+          <Footer />
+        </div>
+      )}
+    </>
   )
 }
 
