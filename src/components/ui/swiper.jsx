@@ -34,7 +34,7 @@ export default function ParallaxSwiper() {
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            className="relative w-full
+            className="relative w-full rounded-xl
               h-[60dvh] flex items-center justify-center
               bg-backgroundDark overflow-hidden max-w-dvw mx-auto "
           >
@@ -51,32 +51,43 @@ export default function ParallaxSwiper() {
             />
 
             {/* Texto */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={loaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.8, delay: 0.9 }}
-              className="relative z-10 text-center text-black px-4 sm:px-8"
-            >
-              <h2
-                data-swiper-parallax="-130%"
-                className={`
-                  text-2xl sm:text-3xl md:text-4xl lg:text-5xl
-                  font-bold drop-shadow-md
-                  ${slide.customClass}
-                `}
+            {(slide.title || slide.desc || slide.logo) && (
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={loaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                transition={{ duration: 0.8, delay: 0.9 }}
+                className={slide.customWrapper || "absolute bottom-0 left-0 w-full bg-black/50 p-4"}
               >
-                {slide.title}
-              </h2>
-              <p
-                data-swiper-parallax="130%"
-                className={`
-                  mt-2 text-sm sm:text-base md:text-lg lg:text-xl
-                  ${slide.customClass}
-                `}
-              >
-                {slide.desc}
-              </p>
-            </motion.div>
+                <div className="flex items-center gap-3">
+                  {slide.logo && (
+                    <img
+                      src={slide.logo}
+                      alt="Logo"
+                      className={slide.customLogo || "w-8 h-8 object-contain"}
+                    />
+                  )}
+                  <div>
+                    {slide.title && (
+                      <h2
+                        data-swiper-parallax="-130%"
+                        className={slide.customTitle || "text-lg font-bold text-white"}
+                      >
+                        {slide.title}
+                      </h2>
+                    )}
+                    {slide.desc && (
+                      <p
+                        data-swiper-parallax="130%"
+                        className={slide.customDesc || "text-sm text-gray-200"}
+                      >
+                        {slide.desc}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              </motion.div>
+            )}
+
           </motion.div>
         </SwiperSlide>
       ))}

@@ -12,7 +12,7 @@ function App() {
     <>
       {loading && <Loader onFinish={() => setLoading(false)} />}
       {!loading && (
-        <div className="min-h-screen w-full max-w-7xl mx-auto bg-background dark:bg-backgroundDark transition-colors duration-500 scroll-smooth px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen w-full mx-auto bg-background/10 dark:bg-backgroundDark/50 transition-colors duration-500 scroll-smooth  backdrop-blur-xs">
           <NavHero />
           <Home />
           <Footer />

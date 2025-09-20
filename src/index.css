@@ -3,14 +3,21 @@
 @theme {
   --color-text: #030303;
   --color-background: #dbe1e1;
-  --color-primary: #50a545;
-  --color-secondary: #dda988;
+  --color-primary: #556175;
+  --color-secondary: #F6BD60;
   --color-accent: #d0f1a7;
   --color-textDark: #fcfcfc;
   --color-backgroundDark: #1e2424;
-  --color-primaryDark: #65ba5a;
+  --color-primaryDark: #556175;
   --color-secondaryDark: #774322;
   --color-accentDark: #37580e;
+}
+
+body{
+  background-image: url('/LogoImg/backGround.avif');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 :root {
@@ -19,7 +26,7 @@
   font-weight: 400;
   scroll-behavior: smooth;
 
-  color-scheme: light dark;
+  color-scheme: dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #dbe1e1;
 

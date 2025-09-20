@@ -11,9 +11,9 @@ const NavHero = () => {
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="fixed top-0 left-0 w-full z-50 bg-background/70 dark:bg-backgroundDark/70 backdrop-blur-md shadow-md"
+      className="sticky top-0 left-0 w-full z-50 bg-background/70 dark:bg-backgroundDark/70 backdrop-blur-md shadow-md"
     >
-      <div className="w-full max-w-7xl mx-auto flex justify-between items-center py-3 px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto flex justify-between items-center py-3 px-4 sm:px-6">
         {/* Logo */}
         <button
           onClick={() =>
@@ -45,14 +45,14 @@ const NavHero = () => {
                   className="relative group"
                 >
                   {item.label}
-                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-black dark:bg-gray-400 transition-all duration-300 group-hover:w-full" />
+                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-primary dark:bg-primary transition-all duration-300 group-hover:w-full" />
                 </button>
               </motion.li>
             ))}
           </ul>
 
           <button
-            onClick={() => window.open("https://wa.me/", "_blank")}
+            onClick={() => window.open("https://wa.me/5493435451198", "_blank")}
             className="ml-4 bg-primary dark:bg-primaryDark text-text dark:text-textDark px-4 py-2 rounded-full hover:bg-primary/80 dark:hover:bg-primaryDark/80 transition duration-300 text-sm"
           >
             Solicitar Entrevista
@@ -96,10 +96,8 @@ const NavHero = () => {
 
             <li>
               <button
-                onClick={() =>
-                  window.open("https://wa.me/5493435416929", "_blank")
-                }
-                className="bg-primary text-text dark:text-textDark px-5 py-2 rounded-full hover:bg-primary/80 transition duration-300"
+                onClick={() => window.open("https://wa.me/5493435451198", "_blank")}
+                className="ml-4 bg-primary dark:bg-primaryDark text-text dark:text-textDark px-4 py-2 rounded-full hover:bg-primary/80 dark:hover:bg-primaryDark/80 transition duration-300 text-sm"
               >
                 Solicitar Entrevista
               </button>

@@ -1,9 +1,10 @@
 export const projects = [
   {
     id: 1,
-    titulo: "Casa Praga",
-    ubicacion: "Crespo, Entre Ríos, Argentina",
-    fecha: "2022",
+    titulo: "Casa Firpo",
+    ubicacion: "Nogoyá, Entre Ríos, Argentina",
+    fecha: "2024",
+    m2: 350,
     imagen: "/Proyectos/1.avif",
   },
   {
@@ -50,6 +51,13 @@ export const projects = [
   },
   {
     id: 8,
+    titulo: "Casa Praga",
+    ubicacion: "Crespo, Entre Ríos, Argentina",
+    fecha: "2022",
+    imagen: "/Proyectos/enhanced_3.avif",
+  },
+  {
+    id: 9,
     titulo: "Casa Praga",
     ubicacion: "Crespo, Entre Ríos, Argentina",
     fecha: "2022",
