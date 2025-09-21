@@ -11,7 +11,7 @@ const NavHero = () => {
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="sticky top-0 left-0 w-full z-50 bg-background/70 dark:bg-backgroundDark/70 backdrop-blur-md shadow-md"
+      className="sticky top-0 left-0 w-full z-50 bg-background/70 backdrop-blur-md shadow-md"
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center py-3 px-4 sm:px-6">
         {/* Logo */}
@@ -19,10 +19,10 @@ const NavHero = () => {
           onClick={() =>
             document.getElementById("hero")?.scrollIntoView({ behavior: "smooth" })
           }
-          className="text-lg font-bold text-text dark:text-textDark flex items-center"
+          className="text-lg font-bold text-text flex items-center"
         >
           Doble L
-          <span className="hidden sm:inline text-gray-600 dark:text-gray-400 pl-2 text-sm">
+          <span className="hidden sm:inline text-gray-400 pl-2 text-sm">
             | Estudio de arquitectura
           </span>
         </button>
@@ -45,7 +45,7 @@ const NavHero = () => {
                   className="relative group"
                 >
                   {item.label}
-                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-primary dark:bg-primary transition-all duration-300 group-hover:w-full" />
+                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full" />
                 </button>
               </motion.li>
             ))}
@@ -53,14 +53,17 @@ const NavHero = () => {
 
           <button
             onClick={() => window.open("https://wa.me/5493435451198", "_blank")}
-            className="ml-4 bg-primary dark:bg-primaryDark text-text dark:text-textDark px-4 py-2 rounded-full hover:bg-primary/80 dark:hover:bg-primaryDark/80 transition duration-300 text-sm"
+            className="ml-4
+            bg-primary text-text hover:bg-primary/80
+            px-4 py-2 rounded-full
+            transition duration-300 text-sm"
           >
             Solicitar Entrevista
           </button>
         </nav>
 
         <button
-          className="md:hidden text-2xl text-text dark:text-textDark"
+          className="md:hidden text-2xl text-text"
           onClick={() => setOpen(!open)}
         >
           {open ? <CloseRoundedIcon size={28} /> : <MenuRoundedIcon size={28} />}
@@ -72,9 +75,9 @@ const NavHero = () => {
           initial={{ height: 0 }}
           animate={{ height: "auto" }}
           transition={{ duration: 0.4 }}
-          className="md:hidden bg-background/70 dark:bg-backgroundDark/70 backdrop-blur-md shadow-md"
+          className="md:hidden bg-background/70 backdrop-blur-md shadow-md"
         >
-          <ul className="flex flex-col items-center gap-4 py-4 text-text dark:text-textDark">
+          <ul className="flex flex-col items-center gap-4 py-4 text-text">
             {[
               { label: "Proyectos", id: "projects" },
               { label: "Contacto", id: "contact" },
@@ -97,7 +100,10 @@ const NavHero = () => {
             <li>
               <button
                 onClick={() => window.open("https://wa.me/5493435451198", "_blank")}
-                className="ml-4 bg-primary dark:bg-primaryDark text-text dark:text-textDark px-4 py-2 rounded-full hover:bg-primary/80 dark:hover:bg-primaryDark/80 transition duration-300 text-sm"
+                className="ml-4
+                bg-primary hover:bg-primary/80
+                text-text px-4 py-2 rounded-full
+                transition duration-300 text-sm"
               >
                 Solicitar Entrevista
               </button>

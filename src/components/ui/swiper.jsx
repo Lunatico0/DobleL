@@ -36,7 +36,7 @@ export default function ParallaxSwiper() {
             animate={{ opacity: 1, y: 0 }}
             className="relative w-full rounded-xl
               h-[60dvh] flex items-center justify-center
-              bg-backgroundDark overflow-hidden max-w-dvw mx-auto "
+              bg-background overflow-hidden max-w-dvw mx-auto "
           >
             <img
               src={slide.image}
