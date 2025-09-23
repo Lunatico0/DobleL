@@ -28,14 +28,12 @@ const Hero = () => {
   const m2 = projects.reduce((total, project) => total + (project.m2 || 0), 0);
   const m2Final = m2 >= 1000 ? Math.floor(m2 / 100) * 100 : m2;
   const projectsCount = projects.length;
+  const message = 'Buenas, quiero mas informacion sobre los precios de renders y mas. Muchas gracias.'
 
   return (
     <section
       id="hero"
-      className="min-h-[80vh] px-3 md:px-8 gap-x-6 scroll-mt-28
-      flex flex-col md:flex-row items-center justify-between
-      bg-background/10 text-text
-      backdrop-blur-md transition-colors duration-500 rounded-xl"
+      className="bg-background/10 text-text backdrop-blur-md transition-colors duration-500 py-4 pb-4 px-3 md:px-8 gap-x-6 scroll-mt-28 flex flex-col-reverse md:flex-row items-center justify-between rounded-xl"
     >
 
       {/* Columna izquierda */}
@@ -50,7 +48,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="inline-flex items-center mx-auto md:mx-0 bg-gradient-to-r from-secondary/20 to-primary/20 border border-primary/30 rounded-full px-4 py-2 mt-4 md:mt-0"
+          className="inline-flex items-center mx-auto md:mx-0 bg-gradient-to-r from-secondary/60 to-primary/60 border border-primary rounded-full px-4 py-2 mt-4 md:mt-0"
         >
           <MilitaryTechIcon className="h-4 w-4 text-text mr-2" />
           <span className="text-text text-sm font-medium">
@@ -77,18 +75,19 @@ const Hero = () => {
         </motion.h1>
 
         {/* Descripción */}
-        <motion.p
+        <motion.div
           className="text-base sm:text-lg md:text-xl text-text"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
         >
-          Un estudio joven que te acompaña desde los cimientos hasta acabados, tu proyecto en manos expertas y confiables.
-        </motion.p>
-
-        <p className="text-base sm:text-lg md:text-xl text-text">
-          Hacemos realidad tus sueños.
-        </p>
+          <p>
+            Un estudio joven que te acompaña desde los cimientos hasta acabados, tu proyecto en manos expertas y confiables.
+          </p>
+          <p>
+            Hacemos realidad tus sueños.
+          </p>
+        </motion.div>
 
         {/* Botones */}
         <motion.div
@@ -97,14 +96,19 @@ const Hero = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 1.2 }}
         >
-          <button className="bg-primary hover:bg-primary/80
-          text-text px-5 py-2 rounded-md
-          shadow-sm transition duration-300">
+          <button
+            className="bg-primary hover:bg-primary/80 text-text px-5 py-2 rounded-md shadow-sm transition duration-300"
+            onClick={() => window.open(`https://wa.me/5493435451198?text=${message}`, "_blank")}
+          >
             Solicitar Presupuesto
           </button>
-          <button className="px-6 py-2 sm:py-3 rounded-lg border-2 border-secondary/70 text-secondary font-semibold hover:bg-secondary/70 hover:text-text transition duration-300">
+
+          <a
+            className="px-6 py-2 sm:py-3 rounded-lg border-2 border-secondary/70 text-secondary font-semibold hover:bg-secondary/70 hover:text-text transition duration-300"
+            href="#projects"
+          >
             Ver Proyectos
-          </button>
+          </a>
         </motion.div>
 
         {/* Stats */}
@@ -136,7 +140,7 @@ const Hero = () => {
       </motion.div>
 
       {/* Columna derecha */}
-      <motion.div className="w-full md:max-w-lg mt-8 md:mt-0">
+      <motion.div className="w-full md:max-w-lg md:mt-0">
         <Swiper />
       </motion.div>
 

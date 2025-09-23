@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 
 const NavHero = () => {
   const [open, setOpen] = useState(false);
+  const sections =
+    [
+      { label: "Proyectos", id: "projects" },
+      { label: "Sobre Nosotros", id: "about" },
+      { label: "Contacto", id: "contact" },
+    ]
 
   return (
     <motion.header
@@ -29,34 +35,26 @@ const NavHero = () => {
 
         <nav className="hidden md:flex items-center gap-6">
           <ul className="flex gap-6">
-            {[
-              { label: "Proyectos", id: "projects" },
-              { label: "Contacto", id: "contact" },
-            ].map((item, index) => (
+            {sections.map((item, index) => (
               <motion.li
                 key={index}
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 200 }}
               >
-                <button
-                  onClick={() =>
-                    document.getElementById(item.id)?.scrollIntoView({ behavior: "smooth" })
-                  }
+                <a
+                  href={`#${item.id}`}
                   className="relative group"
                 >
                   {item.label}
                   <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full" />
-                </button>
+                </a>
               </motion.li>
             ))}
           </ul>
 
           <button
             onClick={() => window.open("https://wa.me/5493435451198", "_blank")}
-            className="ml-4
-            bg-primary text-text hover:bg-primary/80
-            px-4 py-2 rounded-full
-            transition duration-300 text-sm"
+            className="ml-4 bg-primary text-text hover:bg-primary/80 px-4 py-2 rounded-full transition duration-300 text-sm"
           >
             Solicitar Entrevista
           </button>
@@ -78,22 +76,15 @@ const NavHero = () => {
           className="md:hidden bg-background/70 backdrop-blur-md shadow-md"
         >
           <ul className="flex flex-col items-center gap-4 py-4 text-text">
-            {[
-              { label: "Proyectos", id: "projects" },
-              { label: "Contacto", id: "contact" },
-            ].map((item, index) => (
+            {sections.map((item, index) => (
               <li key={index}>
-                <button
-                  onClick={() => {
-                    document
-                      .getElementById(item.id)
-                      ?.scrollIntoView({ behavior: "smooth", block: "start" });
-                    setOpen(false);
-                  }}
-                  className="hover:underline"
+                <a
+                  href={`#${item.id}`}
+                  className="relative group"
                 >
                   {item.label}
-                </button>
+                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full" />
+                </a>
               </li>
             ))}
 
