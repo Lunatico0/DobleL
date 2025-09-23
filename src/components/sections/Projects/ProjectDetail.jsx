@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from "@mui/material/Modal";
 import Backdrop from "@mui/material/Backdrop";
 import Fade from "@mui/material/Fade";
@@ -7,8 +7,23 @@ import IconButton from "@mui/material/IconButton";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import Typography from "@mui/material/Typography";
 
+// swiper
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
+
 export default function ProjectDetail({ project, open, onClose }) {
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
   if (!project) return null;
+
+  const handleClose = () => {
+    setThumbsSwiper(null);
+    onClose();
+  };
 
   const style = {
     position: "absolute",
@@ -28,7 +43,7 @@ export default function ProjectDetail({ project, open, onClose }) {
   return (
     <Modal
       open={Boolean(open)}
-      onClose={onClose}
+      onClose={handleClose}
       closeAfterTransition
       BackdropComponent={Backdrop}
       BackdropProps={{ timeout: 400 }}
@@ -42,7 +57,7 @@ export default function ProjectDetail({ project, open, onClose }) {
         >
           {/* botón cerrar */}
           <IconButton
-            onClick={onClose}
+            onClick={handleClose}
             aria-label="Cerrar"
             color="inherit"
             sx={{ position: "absolute", right: 8, top: 8 }}
@@ -60,20 +75,51 @@ export default function ProjectDetail({ project, open, onClose }) {
             {project.title}
           </Typography>
 
-          {/* imagen */}
-          {project.image && (
-            <Box
-              component="img"
-              src={project.image}
-              alt={project.title}
-              sx={{
-                width: "100%",
-                height: { xs: 180, sm: 240, md: 320 },
-                objectFit: "cover",
-                borderRadius: 1,
-                mb: 2,
-              }}
-            />
+          {/* slider con thumbs */}
+          {project.images?.length > 0 && (
+            <>
+              <Swiper
+                style={{
+                  "--swiper-navigation-color": "#fff",
+                  "--swiper-pagination-color": "#fff",
+                  marginBottom: "12px",
+                }}
+                spaceBetween={10}
+                navigation
+                thumbs={thumbsSwiper ? { swiper: thumbsSwiper } : undefined}
+                modules={[FreeMode, Navigation, Thumbs]}
+                className="mb-4"
+              >
+                {project.images.map((img, idx) => (
+                  <SwiperSlide key={idx}>
+                    <img
+                      src={img}
+                      alt={`${project.title} ${idx + 1}`}
+                      className="w-full h-72 object-cover rounded"
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+
+              <Swiper
+                onSwiper={setThumbsSwiper}
+                spaceBetween={10}
+                slidesPerView={4}
+                freeMode={true}
+                watchSlidesProgress={true}
+                modules={[FreeMode, Navigation, Thumbs]}
+              >
+                {project.images.map((img, idx) => (
+                  <SwiperSlide key={idx}>
+                    <img
+                      src={img}
+                      alt={`thumb ${idx + 1}`}
+                      className="w-full h-20 object-cover rounded cursor-pointer"
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </>
           )}
 
           {/* descripción */}

@@ -40,7 +40,7 @@ const Projects = () => {
             >
               {/* image */}
               <img
-                src={project.image}
+                src={project.images[0]}
                 alt={project.title}
                 className="w-full h-60 sm:h-80 object-cover filter grayscale group-hover:grayscale-0 transition duration-700 ease-in-out"
               />

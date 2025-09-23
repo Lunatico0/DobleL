@@ -7,7 +7,7 @@ export const projects = [
     location: "Nogoyá, Entre Ríos, Argentina",
     date: "2024",
     m2: 350,
-    image: "/Proyectos/1.avif",
+    images: ["/Proyectos/1.avif", "/Proyectos/1.avif"],
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ export const projects = [
     location: "Paraná, Entre Ríos, Argentina",
     date: "2023",
     m2: 350,
-    image: "/Proyectos/3.avif",
+    images: ["/Proyectos/3.avif", "/Proyectos/3.avif"],
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ export const projects = [
     location: "Crespo, Entre Ríos, Argentina",
     date: "2022",
     m2: 350,
-    image: "/Proyectos/IG1.avif",
+    images: ["/Proyectos/IG1.avif", "/Proyectos/IG1.avif"],
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ export const projects = [
     location: "Crespo, Entre Ríos, Argentina",
     date: "2022",
     m2: 350,
-    image: "/Proyectos/enhanced_3.avif",
+    images: ["/Proyectos/enhanced_3.avif", "/Proyectos/enhanced_3.avif"],
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ export const projects = [
     location: "Crespo, Entre Ríos, Argentina",
     date: "2022",
     m2: 350,
-    image: "/Proyectos/1.avif",
+    images: ["/Proyectos/1.avif", "/Proyectos/1.avif"],
   },
   {
     id: 6,
@@ -57,7 +57,7 @@ export const projects = [
     location: "Paraná, Entre Ríos, Argentina",
     date: "2023",
     m2: 350,
-    image: "/Proyectos/3.avif",
+    images: ["/Proyectos/3.avif", "/Proyectos/3.avif"],
   },
   {
     id: 7,
@@ -67,7 +67,7 @@ export const projects = [
     location: "Crespo, Entre Ríos, Argentina",
     date: "2022",
     m2: 350,
-    image: "/Proyectos/IG1.avif",
+    images: ["/Proyectos/IG1.avif", "/Proyectos/IG1.avif"],
   },
   {
     id: 8,
@@ -77,7 +77,7 @@ export const projects = [
     location: "Crespo, Entre Ríos, Argentina",
     date: "2022",
     m2: 350,
-    image: "/Proyectos/enhanced_3.avif",
+    images: ["/Proyectos/enhanced_3.avif", "/Proyectos/enhanced_3.avif"],
   },
   {
     id: 9,
@@ -87,6 +87,6 @@ export const projects = [
     location: "Crespo, Entre Ríos, Argentina",
     date: "2022",
     m2: 350,
-    image: "/Proyectos/enhanced_3.avif",
+    images: ["/Proyectos/enhanced_3.avif", "/Proyectos/enhanced_3.avif"],
   }
 ];
