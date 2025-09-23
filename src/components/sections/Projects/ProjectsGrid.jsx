@@ -19,7 +19,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="bg-background/10 text-text backdrop-blur-md transition-colors duration-500 scroll-mt-28 rounded-xl mt-4"
+      className="bg-background/10 text-text backdrop-blur-md transition-colors duration-500 scroll-mt-19 rounded-xl mt-4"
     >
       <h2
         className="text-3xl md:text-4xl font-bold py-6 text-center"

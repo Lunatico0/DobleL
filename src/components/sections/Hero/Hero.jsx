@@ -33,7 +33,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="bg-background/10 text-text backdrop-blur-md transition-colors duration-500 py-4 pb-4 px-3 md:px-8 gap-x-6 scroll-mt-28 flex flex-col-reverse md:flex-row items-center justify-between rounded-xl"
+      className="bg-background/10 text-text backdrop-blur-md transition-colors duration-500 py-4 pb-4 px-3 md:px-8 gap-x-6 scroll-mt-19 flex flex-col-reverse md:flex-row items-center justify-between rounded-xl"
     >
 
       {/* Columna izquierda */}
