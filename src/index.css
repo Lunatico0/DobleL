@@ -14,6 +14,16 @@
   /* --color-accentDark: #9789a4; */
 }
 
+@layer components {
+  .swiper-thumbs .swiper-slide img {
+    @apply opacity-60 transition duration-300;
+  }
+
+  .swiper-thumbs .swiper-slide.swiper-slide-thumb-active img {
+    @apply opacity-100 border-2 border-secondary;
+  }
+}
+
 body{
   background-image: url('/LogoImg/backGround.avif');
   background-size: cover;

@@ -66,8 +66,10 @@ const Projects = () => {
         ))}
       </section>
 
+      {open && selected && (
+        <ProjectDetail project={selected} open={open} onClose={handleClose} />
+      )}
 
-      <ProjectDetail project={selected} open={open} onClose={handleClose} />
     </section>
   );
 };

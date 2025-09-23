@@ -78,6 +78,7 @@ export default function ProjectDetail({ project, open, onClose }) {
           {/* slider con thumbs */}
           {project.images?.length > 0 && (
             <>
+              {/* Swiper principal */}
               <Swiper
                 style={{
                   "--swiper-navigation-color": "#fff",
@@ -86,7 +87,8 @@ export default function ProjectDetail({ project, open, onClose }) {
                 }}
                 spaceBetween={10}
                 navigation
-                thumbs={thumbsSwiper ? { swiper: thumbsSwiper } : undefined}
+                loop={true}
+                thumbs={{ swiper: thumbsSwiper }}
                 modules={[FreeMode, Navigation, Thumbs]}
                 className="mb-4"
               >
@@ -101,6 +103,7 @@ export default function ProjectDetail({ project, open, onClose }) {
                 ))}
               </Swiper>
 
+              {/* Swiper de miniaturas (thumbs) */}
               <Swiper
                 onSwiper={setThumbsSwiper}
                 spaceBetween={10}
@@ -108,13 +111,14 @@ export default function ProjectDetail({ project, open, onClose }) {
                 freeMode={true}
                 watchSlidesProgress={true}
                 modules={[FreeMode, Navigation, Thumbs]}
+                className="swiper-thumbs"
               >
                 {project.images.map((img, idx) => (
                   <SwiperSlide key={idx}>
                     <img
                       src={img}
                       alt={`thumb ${idx + 1}`}
-                      className="w-full h-20 object-cover rounded cursor-pointer"
+                      className="w-full h-20 aspect-video object-cover rounded cursor-pointer"
                     />
                   </SwiperSlide>
                 ))}
