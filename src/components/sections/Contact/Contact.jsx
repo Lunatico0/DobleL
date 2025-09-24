@@ -23,7 +23,7 @@ const Contact = () => {
       </h2>
 
       <div
-        className="flex flex-col sm:flex-row justify-center items-center gap-4 p-4 my-4 text-sm bg-background/10 text-text backdrop-blur-md transition-colors duration-500 rounded-xl"
+        className="flex sm:flex-row justify-center items-center gap-4 p-4 my-4 text-sm bg-background/10 text-text backdrop-blur-md transition-colors duration-500 rounded-xl"
       >
         <button
           className='cursor-pointer hover:text-accent text-accent/60 transition-colors duration-300'
