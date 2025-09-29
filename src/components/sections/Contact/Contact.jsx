@@ -56,6 +56,7 @@ const Contact = () => {
 
         <a
           href="mailto:doblel.estudiodearquitectura@gmail.com"
+          target='_blank'
           className="cursor-pointer hover:text-accent text-accent/60 transition-colors duration-300"
           aria-label="Correo electrónico"
         >

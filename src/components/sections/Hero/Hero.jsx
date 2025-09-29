@@ -99,6 +99,7 @@ const Hero = () => {
           <a
             className="bg-primary hover:bg-primary/80 text-text rounded-md shadow-sm transition duration-300 text-center p-4"
             href={`https://wa.me/5493435451198?text=${message}`}
+            rel="noopener noreferrer"
             target="_blank"
           >
             Solicitar Presupuesto

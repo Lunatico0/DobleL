@@ -57,6 +57,7 @@ const EmailContact = () => {
           type="text"
           name="name"
           placeholder="Nombre"
+          aria-label='Nombre completo. Opcional.'
           className="w-full p-3 rounded-lg border border-secondary/40 bg-background/90 focus:outline-none focus:ring-1 focus:ring-secondary"
         />
 
@@ -65,14 +66,16 @@ const EmailContact = () => {
           name="email"
           placeholder="Email *"
           required
+          aria-label='Email obligatorio.'
           className="w-full p-3 rounded-lg border border-secondary/40 bg-background/90 focus:outline-none focus:ring-1 focus:ring-secondary"
         />
 
         <textarea
           name="message"
           placeholder="Mensaje *"
-          rows="4"
+          rows="3"
           required
+          aria-label='Mensaje.'
           className="w-full p-3 rounded-lg border border-secondary/40 bg-background/90 focus:outline-none focus:ring-1 focus:ring-secondary"
         />
 
