@@ -39,31 +39,46 @@ const Footer = () => {
       </div>
 
 
-      <div className="flex flex-col sm:flex-row justify-center items-center gap-4 py-4 text-sm">
-        <button
-          className='cursor-pointer hover:text-accent text-accent/60 transition-colors duration-300'
-          onClick={() => window.open("https://www.instagram.com/doblel.arq/", "_blank")}>
+      <div className="flex flex-row justify-center items-center gap-4 py-4 text-sm">
+        <a
+          href="https://www.instagram.com/doblel.arq/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cursor-pointer hover:text-accent text-accent/60 transition-colors duration-300"
+          aria-label="Instagram"
+        >
           <InstagramIcon />
-        </button>
+        </a>
 
-        <button
-          className='cursor-pointer hover:text-accent text-accent/60 transition-colors duration-300'
-          onClick={() => window.open("https://www.linkedin.com/in/lautaro-luna-87029466", "_blank")}>
+        <a
+          href="https://www.linkedin.com/in/lautaro-luna-87029466"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cursor-pointer hover:text-accent text-accent/60 transition-colors duration-300"
+          aria-label="LinkedIn"
+        >
           <LinkedInIcon />
-        </button>
+        </a>
 
-        <button
-          className='cursor-pointer hover:text-accent text-accent/60 transition-colors duration-300'
-          onClick={() => window.open("https://wa.me/+5493435451198", "_blank")}>
+        <a
+          href="https://wa.me/+5493435451198"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cursor-pointer hover:text-accent text-accent/60 transition-colors duration-300"
+          aria-label="WhatsApp"
+        >
           <WhatsAppIcon />
-        </button>
+        </a>
 
-        <button
-          className='cursor-pointer hover:text-accent text-accent/60 transition-colors duration-300'
-          onClick={() => window.open("mailto:doblel.estudiodearquitectura@gmail.com", "_blank")}>
+        <a
+          href="mailto:doblel.estudiodearquitectura@gmail.com"
+          className="cursor-pointer hover:text-accent text-accent/60 transition-colors duration-300"
+          aria-label="Correo electrónico"
+        >
           <AlternateEmailIcon />
-        </button>
+        </a>
       </div>
+
 
       <p className="flex sm:flex-row items-center justify-center gap-2 py-4 text-sm opacity-80 text-text">
         <span className="font-semibold text-accent font-script">DobleL.arq</span>® hecho por
@@ -73,7 +88,7 @@ const Footer = () => {
           href="https://pittanapatricio.vercel.app"
           className="inline-flex items-center"
         >
-          <img src="/LogoImg/DobleP-Logo.svg" alt="Pittana Patricio Dev" className="h-5 ml-1" />
+          <img loading='lazy' decoding='async' src="/LogoImg/DobleP-Logo.svg" alt="DobleP.dev Desarrollo Full Stack" className="h-5 ml-1" />
         </a>
         . © {year}
       </p>

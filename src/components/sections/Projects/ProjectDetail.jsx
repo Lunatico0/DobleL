@@ -95,8 +95,10 @@ export default function ProjectDetail({ project, open, onClose }) {
                 {project.images.map((img, idx) => (
                   <SwiperSlide key={idx}>
                     <img
+                      loading='lazy'
+                      decoding='async'
                       src={img}
-                      alt={`${project.title} ${idx + 1}`}
+                      alt={project.alt}
                       className="w-full h-72 object-cover rounded"
                     />
                   </SwiperSlide>
@@ -116,6 +118,8 @@ export default function ProjectDetail({ project, open, onClose }) {
                 {project.images.map((img, idx) => (
                   <SwiperSlide key={idx}>
                     <img
+                      loading='lazy'
+                      decoding='async'
                       src={img}
                       alt={`thumb ${idx + 1}`}
                       className="w-full h-20 aspect-video object-cover rounded cursor-pointer"

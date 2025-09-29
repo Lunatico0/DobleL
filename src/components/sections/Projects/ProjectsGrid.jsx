@@ -31,7 +31,7 @@ const Projects = () => {
       >
         {projects.map((project, index) => (
           project.status === "active" && (
-            <motion.div
+            <motion.article
               key={project.id}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -40,8 +40,10 @@ const Projects = () => {
             >
               {/* image */}
               <img
+                loading='lazy'
+                decoding='async'
                 src={project.images[0]}
-                alt={project.title}
+                alt={project.alt}
                 className="w-full h-60 sm:h-80 object-cover filter grayscale group-hover:grayscale-0 transition duration-700 ease-in-out"
               />
 
@@ -55,13 +57,14 @@ const Projects = () => {
               {/* Botón que queda visible */}
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-700 ease-in-out">
                 <button
+                  aria-label={`Ver detalles del proyecto ${project.title}`}
                   onClick={() => handleOpen(project)}
                   className="px-6 py-2 border-2 border-white text-white rounded-full hover:bg-white hover:text-black transition"
                 >
                   Ver Proyecto
                 </button>
               </div>
-            </motion.div>
+            </motion.article>
           )
         ))}
       </section>

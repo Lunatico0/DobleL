@@ -6,12 +6,12 @@ import Projects from '@components/sections/Projects/ProjectsGrid.jsx'
 
 const Home = () => {
   return (
-    <div className='my-4 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+    <main className='my-4 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
       <Hero />
       <Projects />
       <About />
       <Contact />
-    </div>
+    </main>
   )
 }
 

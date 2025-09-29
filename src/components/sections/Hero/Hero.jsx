@@ -9,7 +9,7 @@ const Counter = ({ end, duration }) => {
 
   useEffect(() => {
     let start = 0;
-    const increment = end / (duration * 60); // 60fps
+    const increment = end / (duration * 60);
     const timer = setInterval(() => {
       start += increment;
       if (start >= end) {
@@ -33,12 +33,12 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="bg-background/10 text-text backdrop-blur-md transition-colors duration-500 py-4 pb-4 px-3 md:px-8 gap-x-6 scroll-mt-19 flex flex-col-reverse md:flex-row items-center justify-between rounded-xl"
+      className="bg-background/10 text-text backdrop-blur-md transition-colors duration-500 py-4 pb-4 px-3 lg:px-8 gap-x-6 scroll-mt-19 flex flex-col-reverse lg:flex-row items-center justify-between rounded-xl"
     >
 
       {/* Columna izquierda */}
       <motion.div
-        className="w-full md:max-w-xl space-y-6 text-center md:text-left"
+        className="w-full lg:max-w-xl space-y-6 text-center lg:text-left"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -48,7 +48,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="inline-flex items-center mx-auto md:mx-0 bg-gradient-to-r from-secondary/60 to-primary/60 border border-primary rounded-full px-4 py-2 mt-4 md:mt-0"
+          className="inline-flex items-center mx-auto lg:mx-0 bg-gradient-to-r from-secondary/60 to-primary/60 border border-primary rounded-full px-4 py-2 mt-4 lg:mt-0"
         >
           <MilitaryTechIcon className="h-4 w-4 text-text mr-2" />
           <span className="text-text text-sm font-medium">
@@ -76,7 +76,7 @@ const Hero = () => {
 
         {/* Descripción */}
         <motion.div
-          className="text-base sm:text-lg md:text-xl text-text"
+          className="text-base sm:text-lg lg:text-xl md:max-w-xl mx-auto text-text"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
@@ -91,17 +91,18 @@ const Hero = () => {
 
         {/* Botones */}
         <motion.div
-          className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+          className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 1.2 }}
         >
-          <button
-            className="bg-primary hover:bg-primary/80 text-text px-5 py-2 rounded-md shadow-sm transition duration-300"
-            onClick={() => window.open(`https://wa.me/5493435451198?text=${message}`, "_blank")}
+          <a
+            className="bg-primary hover:bg-primary/80 text-text rounded-md shadow-sm transition duration-300 text-center p-4"
+            href={`https://wa.me/5493435451198?text=${message}`}
+            target="_blank"
           >
             Solicitar Presupuesto
-          </button>
+          </a>
 
           <a
             className="px-6 py-2 sm:py-3 rounded-lg border-2 border-secondary/70 text-secondary font-semibold hover:bg-secondary/70 hover:text-text transition duration-300"
@@ -128,13 +129,13 @@ const Hero = () => {
             <p className="text-3xl font-bold text-white">
               <Counter end={projectsCount} duration={1.8} />
             </p>
-            <p className="text-sm text-nowrap">Proyectos Completados</p>
+            <p className="text-sm text-nowrap">Proyectos</p>
           </div>
           <div>
             <p className="text-3xl font-bold text-white">
               <Counter end={100} duration={1.9} />
             </p>
-            <p className="text-sm text-nowrap">Satisfacción Cliente</p>
+            <p className="text-sm text-nowrap">Satisfacción</p>
           </div>
         </motion.div>
       </motion.div>

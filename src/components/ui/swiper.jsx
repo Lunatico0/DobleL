@@ -39,15 +39,16 @@ export default function ParallaxSwiper() {
               bg-background overflow-hidden max-w-dvw mx-auto "
           >
             <img
+              loading='lazy'
+              decoding='async'
               src={slide.image}
-              alt={`Slide ${i}`}
+              alt={slide.alt}
               onLoad={() => setLoaded(true)}
               className={`
                 absolute inset-0 w-full h-full object-cover
                 transition-opacity duration-1200
                 ${loaded ? "opacity-100" : "opacity-0"}
               `}
-              loading="lazy"
             />
 
             {/* Texto */}
@@ -62,7 +63,7 @@ export default function ParallaxSwiper() {
                   {slide.logo && (
                     <img
                       src={slide.logo}
-                      alt="Logo"
+                      alt="Logo DobleL.arq"
                       className={slide.customLogo || "w-8 h-8 object-contain"}
                     />
                   )}
@@ -76,12 +77,12 @@ export default function ParallaxSwiper() {
                       </h2>
                     )}
                     {slide.desc && (
-                      <p
+                      <h3
                         data-swiper-parallax="130%"
                         className={slide.customDesc || "text-sm text-gray-200"}
                       >
                         {slide.desc}
-                      </p>
+                      </h3>
                     )}
                   </div>
                 </div>

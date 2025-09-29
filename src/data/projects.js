@@ -2,6 +2,7 @@ export const projects = [
   {
     id: 1,
     status: "active",
+    alt: "Alt de cada proyecto, a completar cuando esten los proyectos reales",
     title: "Casa Firpo",
     description: "Ambiente cálido y moderno con amplios ventanales y diseño minimalista.",
     location: "Nogoyá, Entre Ríos, Argentina",
@@ -12,6 +13,7 @@ export const projects = [
   {
     id: 2,
     status: "active",
+    alt: "Alt de cada proyecto, a completar cuando esten los proyectos reales",
     title: "Estudio Visión",
     description: "Espacio funcional y elegante, ideal para la creatividad y productividad.",
     location: "Paraná, Entre Ríos, Argentina",
@@ -22,6 +24,7 @@ export const projects = [
   {
     id: 3,
     status: "active",
+    alt: "Alt de cada proyecto, a completar cuando esten los proyectos reales",
     title: "Casa A+L",
     description: "",
     location: "Crespo, Entre Ríos, Argentina",
@@ -32,6 +35,7 @@ export const projects = [
   {
     id: 4,
     status: "active",
+    alt: "Alt de cada proyecto, a completar cuando esten los proyectos reales",
     title: "Casa Praga",
     description: "",
     location: "Crespo, Entre Ríos, Argentina",
@@ -42,6 +46,7 @@ export const projects = [
   {
     id: 5,
     status: "active",
+    alt: "Alt de cada proyecto, a completar cuando esten los proyectos reales",
     title: "Casa Praga",
     description: "",
     location: "Crespo, Entre Ríos, Argentina",
@@ -52,6 +57,7 @@ export const projects = [
   {
     id: 6,
     status: "active",
+    alt: "Alt de cada proyecto, a completar cuando esten los proyectos reales",
     title: "Estudio Visión",
     description: "",
     location: "Paraná, Entre Ríos, Argentina",
@@ -62,6 +68,7 @@ export const projects = [
   {
     id: 7,
     status: "active",
+    alt: "Alt de cada proyecto, a completar cuando esten los proyectos reales",
     title: "Casa A+L",
     description: "",
     location: "Crespo, Entre Ríos, Argentina",
@@ -72,6 +79,7 @@ export const projects = [
   {
     id: 8,
     status: "active",
+    alt: "Alt de cada proyecto, a completar cuando esten los proyectos reales",
     title: "Casa Praga",
     description: "",
     location: "Crespo, Entre Ríos, Argentina",
@@ -82,6 +90,7 @@ export const projects = [
   {
     id: 9,
     status: "active",
+    alt: "Alt de cada proyecto, a completar cuando esten los proyectos reales",
     title: "Casa Praga",
     description: "",
     location: "Crespo, Entre Ríos, Argentina",
