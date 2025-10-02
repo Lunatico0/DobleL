@@ -1,28 +1,8 @@
-import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Swiper from "@ui/swiper.jsx";
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 import { projects } from "@/data/projects.js";
-
-const Counter = ({ end, duration }) => {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    let start = 0;
-    const increment = end / (duration * 60);
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= end) {
-        start = end;
-        clearInterval(timer);
-      }
-      setCount(Math.floor(start));
-    }, 1000 / 60);
-    return () => clearInterval(timer);
-  }, [end, duration]);
-
-  return <span>{end === 100 ? `${count}%` : `+${count}`}</span>;
-};
+import { MotionCounter } from "@/components/ui/MotionCounter.jsx";
 
 const Hero = () => {
   const m2 = projects.reduce((total, project) => total + (project.m2 || 0), 0);
@@ -122,19 +102,19 @@ const Hero = () => {
         >
           <div>
             <p className="text-3xl font-bold text-white">
-              <Counter end={m2Final} duration={2.1} />
+              <MotionCounter end={m2Final} duration={1.5} />
             </p>
             <p className="text-sm text-nowrap">m<sup>2</sup> renderizados</p>
           </div>
           <div>
             <p className="text-3xl font-bold text-white">
-              <Counter end={projectsCount} duration={1.8} />
+              <MotionCounter end={projectsCount} duration={1.3} />
             </p>
             <p className="text-sm text-nowrap">Proyectos</p>
           </div>
           <div>
             <p className="text-3xl font-bold text-white">
-              <Counter end={100} duration={1.9} />
+              <MotionCounter end={100} duration={1.9} />
             </p>
             <p className="text-sm text-nowrap">Satisfacción</p>
           </div>
