@@ -3,9 +3,9 @@ import emailjs from '@emailjs/browser';
 import Toast from '@/components/ui/Toast.jsx';
 
 const EmailContact = () => {
-  const serviceID = 'service_wv4mcrt';
-  const templateID = 'template_i8rhdui';
-  const publicKey = 'XD5PHJUpOdW2K6fto';
+  const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
   const form = useRef();
   const [toast, setToast] = useState(null);
 

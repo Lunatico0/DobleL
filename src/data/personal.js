@@ -15,7 +15,7 @@ export const Slide = [
     alt: "Hago direccion de obras"
   },
   {
-    image: "/Proyectos/3.avif",
+    image: "/LogoImg/hero-image.avif",
     title: "Proyectos personalizados",
     desc: "Desde cimientos hasta acabados, tu proyecto en manos expertas.",
     logo: "/Personal/dobleL-arq.svg",

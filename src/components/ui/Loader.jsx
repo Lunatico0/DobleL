@@ -8,7 +8,7 @@ export default function Loader({ onFinish }) {
     const timer = setTimeout(() => {
       setDone(true);
       if (onFinish) onFinish();
-    }, 4000);
+    }, 3000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -102,7 +102,7 @@ export default function Loader({ onFinish }) {
             from="600"
             to="0"
             dur="2s"
-            begin="1s"
+            begin="0.5s"
             fill="freeze"
           />
           <animate

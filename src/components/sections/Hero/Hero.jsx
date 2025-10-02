@@ -21,14 +21,14 @@ const Counter = ({ end, duration }) => {
     return () => clearInterval(timer);
   }, [end, duration]);
 
-  return <span>{count}{end === 100 ? "%" : "+"}</span>;
+  return <span>{end === 100 ? `${count}%` : `+${count}`}</span>;
 };
 
 const Hero = () => {
   const m2 = projects.reduce((total, project) => total + (project.m2 || 0), 0);
   const m2Final = m2 >= 1000 ? Math.floor(m2 / 100) * 100 : m2;
   const projectsCount = projects.length;
-  const message = 'Buenas, quiero mas informacion sobre los precios de renders y mas. Muchas gracias.'
+  const message = 'Buenas, quiero mas información sobre tu forma de trabajo, plazos y formas de pago. Muchas gracias'
 
   return (
     <section
@@ -82,10 +82,10 @@ const Hero = () => {
           transition={{ duration: 1, delay: 1 }}
         >
           <p>
-            Un estudio joven que te acompaña desde los cimientos hasta acabados, tu proyecto en manos expertas y confiables.
+            Un estudio joven que te acompaña desde el primer encuentro hasta los ultimos detalles.
           </p>
           <p>
-            Hacemos realidad tus sueños.
+            Tu proyecto en manos expertas y confiables que hacen realidad tu anhelo.
           </p>
         </motion.div>
 
