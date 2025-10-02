@@ -10,14 +10,14 @@ const About = () => {
       <h2 className="text-3xl font-bold mb-6">Acerca de Nosotros</h2>
 
       <p className="max-w-[80ch] mx-auto text-text mb-4 text-pretty">
-        Un estudio <span className='text-secondary'>joven</span>, creativo e innovador, donde cada <span className='text-secondary'>proyecto</span> propuesto, nace de fusionar ideas frescas con rigor técnico, adaptandose a los estandares de eficiencia energetica.
+        Un estudio <span className='text-secondary'>joven</span>, creativo e innovador, donde cada <span className='text-secondary'>proyecto</span> propuesto nace de fusionar ideas frescas con rigor técnico, adaptándose a los estándares de eficiencia energética.
       </p>
 
       <p className="max-w-[80ch] mx-auto text-text mb-12 text-pretty">
-        Creemos en una <span className='text-secondary'>arquitectura viva</span>, libre y sobre todo habitable, donde las personas son siempre el punto central: quienes habitan, sienten y disfrutan los espacios. Con un enfoque que combina innovación, técnica y sensibilidad material, para <span className='text-secondary'>transformar</span> cada proyecto en un espacio único que invita a vivir y a conectar.
+        Creemos en una <span className='text-secondary'>arquitectura viva</span>, libre y, sobre todo, habitable, donde las personas son siempre el punto central: quienes habitan, sienten y disfrutan los espacios. Con un enfoque que combina innovación, técnica y sensibilidad material, <span className='text-secondary'>transformamos</span> cada proyecto en un espacio único que invita a vivir y a conectar.
       </p>
 
-      <div className="flex flex-row justify-around items-center max-w-4xl mx-auto">
+      <div className="flex flex-row justify-around items-stretch max-w-4xl mx-auto w-full gap-6">
         {aboutData.map((item, index) => (
           <AboutCard
             key={index}

@@ -62,10 +62,10 @@ const Hero = () => {
           transition={{ duration: 1, delay: 1 }}
         >
           <p>
-            Un estudio joven que te acompaña desde el primer encuentro hasta los ultimos detalles.
+            Un estudio joven que te acompaña desde el primer encuentro hasta los últimos detalles.
           </p>
           <p>
-            Tu proyecto en manos expertas y confiables que hacen realidad tu anhelo.
+            Tu proyecto en manos expertas y confiables, que hacen realidad tu anhelo.
           </p>
         </motion.div>
 

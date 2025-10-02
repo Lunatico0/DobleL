@@ -1,7 +1,7 @@
 export const Slide = [
   {
     image: "/Personal/Lautaro3.webp",
-    alt: "Soy Lautaro Luna, Arquitecto matriculado"
+    alt: "Soy Lautaro Luna, arquitecto matriculado"
   },
   {
     image: "/Proyectos/Slide2.webp",
@@ -12,7 +12,7 @@ export const Slide = [
     customTitle: "text-xl sm:text-2xl md:text-3xl font-bold text-white",
     customDesc: "text-sm sm:text-base md:text-lg text-gray-200",
     customLogo: "size-24 object-contain",
-    alt: "Hago direccion de obras"
+    alt: "Supervisión de obra en ejecución"
   },
   {
     image: "/LogoImg/hero-image.avif",
@@ -23,6 +23,6 @@ export const Slide = [
     customTitle: "text-xl sm:text-2xl md:text-3xl font-bold text-white",
     customDesc: "text-sm sm:text-base md:text-lg text-gray-200",
     customLogo: "size-24 object-contain",
-    alt: "Hago computo y presupuestos"
+    alt: "Cómputo métrico y presupuestos detallados"
   },
 ];

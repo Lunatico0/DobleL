@@ -9,11 +9,11 @@ export const aboutData = [
   {
     Icon: Commitment,
     title: "Compromiso",
-    description: "Proponemos cumplir con cada etapa para satisfacer al cliente."
+    description: "Cumplimos cada etapa con responsabilidad para garantizar la satisfacción del cliente."
   },
   {
     Icon: Quality,
     title: "Calidad",
-    description: "Ofrecemos lo ultimo en soluciones de manera confiable y duradera."
+    description: "Ofrecemos lo último en soluciones arquitectónicas, de manera confiable y duradera."
   }
 ];

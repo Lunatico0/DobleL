@@ -9,7 +9,7 @@ const Contact = () => {
       className="flex flex-col items-center justify-center px-6 py-16 scroll-mt-19 bg-background/10 text-text backdrop-blur-md transition-colors duration-500 rounded-xl"
     >
       <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
-        Contactanos
+        Contáctanos
       </h2>
 
       <h2 className='text-text'>
